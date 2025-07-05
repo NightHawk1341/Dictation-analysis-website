@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Saisie des Dictées</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="script_saisie_eleve.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Analyse de Dictées</h1>
+        <h2>Saisie des réponses des élèves</h2>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="page_reference.html">Créer une dictée</a></li>
+            <li><a href="page_saisie.html" class="active">Saisir les réponses</a></li>
+            <li><a href="page_analyse_resultats.html">Analyser les résultats</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form id="form_saisie_eleve">
+            <div class="bloc_selection_dictee">
+                <label for="selection_dictee">Sélectionnez la dictée :</label>
+                <select id="selection_dictee" name="selection_dictee">
+                    <option value="">Choisir une dictée</option>
+                    <!-- Options ajoutées dynamiquement avec jQuery -->
+                </select>
+                <div id="info_dictee">
+                    <!-- Informations sur la dictée ajoutées dynamiquement -->
+                </div>
+            </div>
+
+            <div id="conteneur_eleves">
+                <div class="bloc_eleve">
+                    <div class="info_eleve">
+                        <label>Prénom :
+                            <input type="text" name="prenom_eleve" class="prenom_eleve">
+                        </label>
+                        <label>Nom :
+                            <input type="text" name="nom_eleve" class="nom_eleve">
+                        </label>
+                        <label>Niveau :
+                            <select name="niveau_eleve" class="niveau_eleve">
+                                <option value="">Sélectionner</option>
+                                <option value="CP">CP</option>
+                                <option value="CE1">CE1</option>
+                                <option value="CE2">CE2</option>
+                                <option value="CM1">CM1</option>
+                                <option value="CM2">CM2</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="bloc_saisie_reponse">
+                        <label for="reponse_eleve">Réponse de l'élève :</label>
+                        <textarea name="reponse_eleve" class="reponse_eleve" rows="4"
+                            placeholder="Pour une dictée de mots, séparez les mots par des point-virgules (;)"></textarea>
+                    </div>
+                    <div class="boutons_action">
+                        <button type="button" class="confirmer_eleve">Confirmer</button>
+                        <button type="button" class="supprimer_eleve">Supprimer</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="boutons_action">
+                <button type="button" id="ajouter_eleve">Ajouter un élève</button>
+                <button type="button" id="valider_saisies">Valider toutes les saisies</button>
+            </div>
+
+            <div id="message_zone">
+                <!-- Messages d'information ajoutés dynamiquement -->
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div class="contenu_footer">
+            <p>Master 1 IdL - Projet Programmation Web et TAL - 2024-2025</p>
+            <p><a href="#" id="a_propos">À propos</a></p>
+        </div>
+    </footer>
+</body>
+</html>

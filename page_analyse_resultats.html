@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style_analyse.css"/>
+    <title>Analyse des Résultats - Dictées</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="script_analyse_resultats.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Analyse de Dictées</h1>
+        <h2>Visualisation et Analyse des Résultats</h2>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="page_reference.html">Créer une dictée</a></li>
+            <li><a href="page_saisie.html">Saisir les réponses</a></li>
+            <li><a href="page_analyse_resultats.html" class="active">Analyser les résultats</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div class="filtres_analyse">
+            <h3>Filtres d'analyse</h3>
+            
+            <div class="filtre_groupe">
+                <label for="filtre_dictee">Dictée :</label>
+                <select id="filtre_dictee" name="filtre_dictee">
+                    <option value="">Toutes les dictées</option>
+                    <!-- Options ajoutées dynamiquement -->
+                </select>
+            </div>
+            
+            <div class="filtre_groupe">
+                <label for="filtre_niveau">Niveau :</label>
+                <select id="filtre_niveau" name="filtre_niveau">
+                    <option value="">Tous les niveaux</option>
+                    <option value="CP">CP</option>
+                    <option value="CE1">CE1</option>
+                    <option value="CE2">CE2</option>
+                    <option value="CM1">CM1</option>
+                    <option value="CM2">CM2</option>
+                </select>
+            </div>
+            
+            <button id="bouton_appliquer_filtres" type="button">Appliquer les filtres</button>
+        </div>
+        
+        <div class="onglets_conteneur">
+            <div class="onglets">
+                <button class="onglet active" data-target="resultats_eleves" type="button">Résultats Élèves</button>
+                <button class="onglet" data-target="statistiques_globales" type="button">Statistiques globales</button>
+            </div>
+            
+            <div class="contenu_onglet" id="resultats_eleves">
+                <h4>Résultats par élève</h4>
+                
+                <table id="tableau_resultats">
+                    <thead>
+                        <tr>
+                            <th>Élève</th>
+                            <th>Niveau</th>
+                            <th>Dictée</th>
+                            <th>Erreurs Radical</th>
+                            <th>Erreurs Désinence</th>
+                            <th>Erreurs Radical et Désinence</th>
+                            <th>Autres Erreurs</th>
+                            <th>Total Erreurs</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody_resultats">
+                        <!-- Résultats seront ajoutés ici par JavaScript -->
+                    </tbody>
+                </table>
+                
+                <p id="message_resultats">Chargement des résultats...</p>
+            </div>
+            
+            <div class="contenu_onglet" id="statistiques_globales" style="display: none;">
+                <h4>Statistiques globales par mot</h4>
+                
+                <div class="instructions_statistiques">
+                    <p>Sélectionnez une dictée pour afficher les statistiques des erreurs par mot.</p>
+                </div>
+                
+                <table id="tableau_statistiques">
+                    <thead>
+                        <tr>
+                            <th>Mot</th>
+                            <th>Dictée</th>
+                            <th>Erreurs Radical</th>
+                            <th>Erreurs Désinence</th>
+                            <th>Erreurs Radical et Désinence</th>
+                            <th>Total Erreurs</th>
+                            <th>Pourcentage d'erreurs</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody_statistiques">
+                        <!-- Statistiques seront ajoutées ici par JavaScript -->
+                    </tbody>
+                </table>
+                
+                <p id="message_statistiques">Sélectionnez une dictée pour afficher les statistiques.</p>
+            </div>
+        </div>
+        
+        <div class="actions_resultats">
+            <button id="bouton_exporter_csv" type="button">Exporter les résultats (CSV)</button>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="contenu_footer">
+            <p>Master 1 IdL - Projet Programmation Web et TAL - 2024-2025</p>
+            <p><a href="#" id="a_propos">À propos</a></p>
+        </div>
+    </footer>
+</body>
+</html>

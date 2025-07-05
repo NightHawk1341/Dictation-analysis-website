@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="script_reference.js"></script>
+    <title>Références - Analyse de Dictées</title>
+</head>
+<body>
+    <header>
+        <h1>Analyse de Dictées</h1>
+        <h2>Bienvenue sur le site d'analyse des dictées</h2>
+        <h3>Veuillez saisir les mots qui serviront de références pour l'analyse :</h3>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="page_reference.html" class="active">Créer une dictée</a></li>
+            <li><a href="page_saisie.html">Saisir les réponses</a></li>
+            <li><a href="page_analyse_resultats.html">Analyser les résultats</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="formulaire_dictee">
+            <div id="bloc_nom_dictee">
+                <label for="nom_dictee">Entrez le nom de la dictée</label>
+                <input type="text" id="nom_dictee" name="nom_dictee" placeholder="Dictée des animaux">
+                <select id="type_dictee" name="type_dictee">
+                    <option value="mots">Dictée de mots</option>
+                </select>
+                <button id="confirmer_nom_dictee">Confirmer</button>
+            </div>
+
+            <div id="bloc_reference">
+                <div class="bloc_saisie_reference">
+                    <div id="conteneur_mots_reference">
+                        <div class="ligne_mot">
+                            <label>Mot <span class="compteur_mot">1</span> 
+                                <input type="text" name="mot_reference[]" class="mot_reference">
+                            </label>
+                            <div class="info_mot_supplementaire" style="display: none;">
+                                <label>Catégorie: <input type="text" name="categorie[]" placeholder="nom, verbe, etc."></label>
+                                <label>Lemme: <input type="text" name="lemme[]" placeholder="forme canonique"></label>
+                                <label>Radical: <input type="text" name="radical[]"></label>
+                                <label>Désinence: <input type="text" name="desinence[]"></label>
+                            </div>
+                            <button type="button" class="afficher_plus">+</button>
+                            <button type="button" class="confirmer_mot">✓</button>
+                            <button type="button" class="supprimer_mot">✕</button>
+                        </div>
+                    </div>
+                    <div class="boutons_action">
+                        <button type="button" id="ajouter_mot">Ajouter un mot</button>
+                        <button type="button" id="confirmer_dictee">Confirmer la dictée</button>
+                    </div>
+                </div>
+                <div class="apercu_dictee">
+                    <h4>Aperçu de la dictée</h4>
+                    <div id="liste_mots_apercu"></div>
+                </div>
+            </div>
+            <div class="boutons_action">
+                <button type="button" id="reinitialiser">Réinitialiser</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="contenu_footer">
+            <p>Master 1 IdL - Projet Programmation Web et TAL - 2024-2025</p>
+            <p><a href="#" id="a_propos">À propos</a></p>
+        </div>
+    </footer>
+</body>
+</html>

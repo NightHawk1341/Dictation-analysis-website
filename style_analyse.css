@@ -1,0 +1,365 @@
+/* Style général */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #3498db;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+header h2 {
+    font-size: 1.6em;
+}
+
+/* Navigation */
+nav {
+    background-color: #2980b9;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    background-color: #1c6ea4;
+    transform: translateY(-2px);
+}
+
+nav ul li a.active {
+    background-color: #1c6ea4;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenu principal */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Filtres */
+.filtres_analyse {
+    width: 90%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+}
+
+.filtres_analyse h3 {
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.filtre_groupe {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.filtre_groupe:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.filtre_groupe label {
+    min-width: 100px;
+    margin-right: 15px;
+    font-weight: 500;
+}
+
+.filtre_groupe select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1;
+    max-width: 300px;
+    transition: border-color 0.3s ease;
+}
+
+.filtre_groupe select:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Boutons */
+button {
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Onglets */
+.onglets_conteneur {
+    width: 90%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+}
+
+.onglets {
+    display: flex;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.onglet {
+    padding: 12px 20px;
+    margin-right: 5px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.onglet:hover {
+    background-color: #d0d0d0;
+}
+
+.onglet.active {
+    background-color: #fff;
+    color: #333;
+    font-weight: bold;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contenu_onglet {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 0 5px 5px 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contenu_onglet h4 {
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    color: #2c3e50;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Tableaux */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    color: #333;
+}
+
+table tr:hover {
+    background-color: #f9f9f9;
+}
+
+table tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+/* Messages */
+#message_resultats, #message_statistiques, .instructions_statistiques p {
+    text-align: center;
+    padding: 20px;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.instructions_statistiques {
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border-left: 4px solid #3498db;
+    padding: 10px;
+}
+
+/* Messages de statut */
+.message_succes, .message_erreur, .message_info {
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.message_succes {
+    background-color: #d4edda;
+    color: #155724;
+    border-left: 4px solid #28a745;
+}
+
+.message_erreur {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-left: 4px solid #dc3545;
+}
+
+.message_info {
+    background-color: #cce5ff;
+    color: #004085;
+    border-left: 4px solid #007bff;
+}
+
+/* Actions */
+.actions_resultats {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+#bouton_exporter_csv {
+    background-color: #27ae60;
+}
+
+#bouton_exporter_csv:hover {
+    background-color: #219653;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 25px 0;
+    margin-top: auto;
+}
+
+.contenu_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contenu_footer a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contenu_footer a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Animation de chargement */
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+.chargement {
+    animation: pulse 1.5s infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .filtre_groupe {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .filtre_groupe label {
+        margin-bottom: 10px;
+    }
+    
+    .filtre_groupe select {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .onglets {
+        flex-direction: column;
+    }
+    
+    .onglet {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .contenu_onglet {
+        border-radius: 5px;
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
