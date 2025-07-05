@@ -9,8 +9,17 @@ error_reporting(E_ALL);
 
 try {
     // Connexion à la base de données
-    $pdo = new PDO("mysql:host=localhost;dbname=duzhenko;charset=utf8", "duzhenko", "nikita!");
+    $host = getenv('DB_HOST');
+    $db   = getenv('DB_NAME');
+    $user = getenv('DB_USER');
+    $pass = getenv('DB_PASS');
+    $charset = 'utf8mb4';
+
+    $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+
+    $pdo = new PDO($dsn, $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 
     // Vérifier si 'eleves' est défini
     if (!isset($_POST['eleves'])) {
