@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: dictation-analysis
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
