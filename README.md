@@ -1,45 +1,41 @@
-# French Dictation Analysis Tool
+# Dictation-Analysis Website  
+Outil web d’analyse de dictées pour enseignants
 
-A web application designed to help elementary school teachers analyze French word dictations and track student progress.
+## Description générale  
+**Dictation-Analysis Website** est une application web destinée aux enseignants souhaitant analyser facilement les dictées de leurs élèves.  
+L’outil compare automatiquement les productions des élèves avec un texte de référence, identifie les erreurs orthographiques et fournit des statistiques permettant de suivre la progression individuelle et collective.
 
-## 📚 About This Project
-
-This project was developed as a final team project for the Web Programming course in the first year of the **Industries de la langue** master's program at the **University of Grenoble-Alpes**.
-
-### Team Members
-- **Nikita Duzhenko**
-- **Aggnia Marina** 
-- **Sorin Ionash**
-
-## 🎯 Purpose
-
-This web tool assists elementary school teachers in:
-- Analyzing French word dictations
-- Identifying common spelling errors
-- Providing feedback on dictation performance
-
-## 🛠️ Technology Stack
-
-- **Frontend**: HTML5, CSS3, JavaScript (jQuery)
-- **Backend**: PHP
-- **Database**: MySQL (managed via phpMyAdmin)
-- **Database Management**: phpMyAdmin
-
-## 🚀 Features
-
-- Interactive dictation analysis interface
-- Error pattern identification
-- French language-specific spell checking
-- Performance analytics and reporting
-
-## 🎓 Academic Context
-
-This project was created as part of the curriculum for:
-- **Program**: Industries de la langue (Language Industries)
-- **Level**: First year master's degree
-- **Institution**: University of Grenoble-Alpes
-- **Course**: Web Programming
+Ce projet a été développé dans le cadre du Master *Industries de la Langue* (Université Grenoble Alpes) dans un objectif pédagogique mêlant programmation web, manipulation de données textuelles et ergonomie d’outils éducatifs.
 
 ---
 
-*This tool is designed specifically for French language education and may require adaptation for other languages.*
+## Objectifs du projet  
+- Automatiser la détection et le comptage des erreurs dans les dictées.  
+- Offrir une analyse statistique claire : erreurs fréquentes, répartition par élève, évolution des performances.  
+- Faciliter le travail des enseignants, notamment lorsque le nombre d’élèves est important.  
+- Proposer un outil web accessible, utilisable dans un contexte scolaire.
+
+---
+
+## Technologies utilisées  
+- **Frontend** : HTML5, CSS3, JavaScript (jQuery)  
+- **Backend** : PHP  
+- **Base de données** : MySQL  
+- **Administration** : phpMyAdmin  
+
+---
+
+## Fonctionnalités principales  
+- Ajout d’un texte de dictée et des réponses d’élèves.  
+- Comparaison automatique et mise en évidence des erreurs.  
+- Statistiques par élève, par dictée, par type d’erreur.  
+- Interface simple et utilisable depuis un navigateur web.  
+- Export / consultation des résultats selon plusieurs vues.
+
+---
+
+## Auteurs
+
+**Nikita Duzhenko**
+**Aggnia Marina**
+**Sorin Ionas**
