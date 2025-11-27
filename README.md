@@ -2,7 +2,7 @@
 Outil web d’analyse de dictées pour enseignants
 
 ## Description générale  
-**Dictation-Analysis Website** est une application web destinée aux enseignants souhaitant analyser facilement les dictées de leurs élèves.  
+**Cet outil web** est destiné aux enseignants souhaitant analyser facilement les dictées de leurs élèves.  
 L’outil compare automatiquement les productions des élèves avec un texte de référence, identifie les erreurs orthographiques et fournit des statistiques permettant de suivre la progression individuelle et collective.
 
 Ce projet a été développé dans le cadre du Master *Industries de la Langue* (Université Grenoble Alpes) dans un objectif pédagogique mêlant programmation web, manipulation de données textuelles et ergonomie d’outils éducatifs.
