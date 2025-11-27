@@ -36,6 +36,6 @@ Ce projet a été développé dans le cadre du Master *Industries de la Langue* 
 
 ## Auteurs
 
-**Nikita Duzhenko**
-**Aggnia Marina**
-**Sorin Ionas**
+- **Nikita Duzhenko**
+- **Aggnia Marina**
+- **Sorin Ionas**
